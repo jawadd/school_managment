@@ -17,5 +17,8 @@ class StudentSerializer(serializers.ModelSerializer):
             raise serializers.ValidationError("Enrollment date cannot be before the date of birth.")
         if enrollment_date > date.today():
             raise serializers.ValidationError("Enrollment date cannot be in the future.")
+        if date_of_birth > date.today():
+            raise serializers.ValidationError("Date of birth cannot be in the future.")
+
         
         return data

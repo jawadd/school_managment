@@ -25,4 +25,6 @@ class Student(models.Model):
             raise ValidationError("Enrollment date cannot be before the date of birth.")
         if self.enrollment_date > date.today():
             raise ValidationError("Enrollment date cannot be in the future.")
+        if self.date_of_birth > date.today():
+            raise ValidationError("Date of birth cannot be in the future.")
 
