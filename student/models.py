@@ -1,6 +1,6 @@
 from django.db import models
 from uuid import uuid4
-from .validators import validate_year
+from .validators import validate_enrollment_date
 from school.models import School
 
 class Student(models.Model):
@@ -16,4 +16,9 @@ class Student(models.Model):
     
     def __str__(self):
         return f"{self.first_name} {self.last_name}"
+    def clean(self):
+        super().clean()
+        # Validate enrollment_date against date_of_birth
+        if self.enrollment_date and self.date_of_birth:
+            validate_enrollment_date(self.enrollment_date, self.date_of_birth)
 
