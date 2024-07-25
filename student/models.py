@@ -1,6 +1,6 @@
 from django.db import models
 from uuid import uuid4
-from .validators import validate_
+from .validators import validate_enrollment_date
 from school.models import School
 
 class Student(models.Model):
