@@ -1,3 +1,4 @@
+#thanks for the programming..
 from rest_framework import viewsets
 from .models import School
 from .serializers import SchoolSerializer
