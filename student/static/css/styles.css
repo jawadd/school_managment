@@ -1,0 +1,26 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;  /* Center horizontally */
+    justify-content: center;  /* Center vertically if needed */
+    min-height: 100vh;  /* Full height to center vertically */
+}
+
+.container h1 {
+    text-align: center;  /* Center the header text */
+}
+
+.container form {
+    width: 100%;
+    max-width: 500px;  /* Adjust as needed */
+}
+
+.container form input,
+.container form select,
+.container form textarea {
+    max-width: 100%;  /* Ensure form elements fit within the form */
+    width: 100%;
+    padding: 8px;  /* Adjust padding if needed */
+    margin-bottom: 10px;  /* Adjust spacing if needed */
+}
+
